@@ -1,5 +1,5 @@
 # ¿Quién es ese Nakama?
-![Logo](images/Logo.png)
+![Logo](Images/Logo.png)
 Un simulador del clásico juego de mesa **"Adivina Quién"**, pero con personajes del mundo de **One Piece**.  
 El sistema realiza preguntas (sí/no/no sé) sobre atributos de los personajes hasta intentar adivinar en cuál pensaste.  
 Si no acierta, **aprende automáticamente** el nuevo personaje y lo guarda para futuras partidas, similar a *Akinator*.
