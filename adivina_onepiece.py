@@ -12,7 +12,7 @@ ATTRS = [
     "es_espadachin", "es_cocinero", "es_doctor", "es_cyborg", "es_esqueleto",
     "usa_pistola", "es_mujer", "tiene_sombrero", "es_revolucionario", "es_marine",
     "tiene_cicatriz", "usa_espada_grande", "es_navegante", "tiene_arma_especial",
-    "es_almirante"
+    "es_almirante","es_shichibukai"
 ]
 
 ATTR_TEXT = {
@@ -35,6 +35,7 @@ ATTR_TEXT = {
     "es_navegante": "¿Es navegante?",
     "tiene_arma_especial": "¿Tiene un arma especial?",
     "es_almirante": "¿Es un almirante?",
+    "es_shichibukai": "¿Es un Shichibukai?",
 }
 
 # =========================

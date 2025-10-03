@@ -2,7 +2,7 @@
   {
     "nombre": "Monkey D. Luffy",
     "es_miembro_mugiwara": true,
-    "es_yonko": false,
+    "es_yonko": true,
     "tiene_fruta_del_diablo": true,
     "fruta_logia": false,
     "es_espadachin": false,
@@ -15,7 +15,8 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -34,7 +35,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -53,7 +55,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -72,7 +75,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -91,7 +95,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -110,7 +115,8 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -129,7 +135,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -148,7 +155,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -167,7 +175,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": true
   },
 
   {
@@ -176,7 +185,27 @@
     "es_yonko": false,
     "tiene_fruta_del_diablo": true,
     "fruta_logia": false,
-    "es_espadachin": false,
+    "es_espadachin": true,
+    "es_cocinero": false,
+    "es_doctor": true,
+    "es_cyborg": false,
+    "es_esqueleto": false,
+    "usa_pistola": false,
+    "es_mujer": false,
+    "tiene_sombrero": true,
+    "es_revolucionario": false,
+    "es_marine": false,
+    "es_almirante": false,
+    "es_shichibukai": false
+  },
+
+  {
+    "nombre": "Shanks",
+    "es_miembro_mugiwara": false,
+    "es_yonko": true,
+    "tiene_fruta_del_diablo": false,
+    "fruta_logia": false,
+    "es_espadachin": true,
     "es_cocinero": false,
     "es_doctor": false,
     "es_cyborg": false,
@@ -186,26 +215,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
-  },
-
-  {
-    "nombre": "Shanks",
-    "es_miembro_mugiwara": false,
-    "es_yonko": true,
-    "tiene_fruta_del_diablo": false,
-    "fruta_logia": false,
-    "es_espadachin": false,
-    "es_cocinero": false,
-    "es_doctor": false,
-    "es_cyborg": false,
-    "es_esqueleto": false,
-    "usa_pistola": false,
-    "es_mujer": false,
-    "tiene_sombrero": true,
-    "es_revolucionario": false,
-    "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -224,7 +235,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": true
   },
 
   {
@@ -242,7 +254,9 @@
     "es_mujer": true,
     "tiene_sombrero": false,
     "es_revolucionario": false,
-    "es_marine": false
+    "es_marine": false,
+    "es_almirante": false,
+    "es_shichibukai": true
   },
 
   {
@@ -250,7 +264,7 @@
     "es_miembro_mugiwara": false,
     "es_yonko": true,
     "tiene_fruta_del_diablo": true,
-    "fruta_logia": false,
+    "fruta_logia": true,
     "es_espadachin": false,
     "es_cocinero": false,
     "es_doctor": false,
@@ -258,10 +272,11 @@
     "es_esqueleto": false,
     "usa_pistola": false,
     "es_mujer": false,
-    "tiene_sombrero": false,
+    "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -269,7 +284,7 @@
     "es_miembro_mugiwara": false,
     "es_yonko": false,
     "tiene_fruta_del_diablo": true,
-    "fruta_logia": false,
+    "fruta_logia": true,
     "es_espadachin": false,
     "es_cocinero": false,
     "es_doctor": false,
@@ -280,7 +295,8 @@
     "tiene_sombrero": true,
     "es_revolucionario": true,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -299,7 +315,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -318,7 +335,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -337,7 +355,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
-    "es_almirante": true
+    "es_almirante": true,
+    "es_shichibukai": false
   },
 
   {
@@ -356,7 +375,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -375,7 +395,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -394,7 +415,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
@@ -402,7 +424,7 @@
     "es_miembro_mugiwara": false,
     "es_yonko": false,
     "tiene_fruta_del_diablo": true,
-    "fruta_logia": true,
+    "fruta_logia": false,
     "es_espadachin": true,
     "es_cocinero": false,
     "es_doctor": false,
@@ -413,7 +435,8 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
-    "es_almirante": true
+    "es_almirante": true,
+    "es_shichibukai": false
   },
 
   {
@@ -451,13 +474,14 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": true
   },
 
   {
     "nombre": "Buggy",
     "es_miembro_mugiwara": false,
-    "es_yonko": false,
+    "es_yonko": true,
     "tiene_fruta_del_diablo": true,
     "fruta_logia": false,
     "es_espadachin": false,
@@ -470,15 +494,16 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
-    "nombre": "Bartolomeo",
+    "nombre": "Portgas D. Ace",
     "es_miembro_mugiwara": false,
     "es_yonko": false,
-    "tiene_fruta_del_diablo": false,
-    "fruta_logia": false,
+    "tiene_fruta_del_diablo": true,
+    "fruta_logia": true,
     "es_espadachin": false,
     "es_cocinero": false,
     "es_doctor": false,
@@ -486,14 +511,35 @@
     "es_esqueleto": false,
     "usa_pistola": false,
     "es_mujer": false,
-    "tiene_sombrero": false,
+    "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": false
   },
 
   {
-    "nombre": "Rebecca",
+    "nombre": "Nico Robin",
+    "es_miembro_mugiwara": true,
+    "es_yonko": false,
+    "tiene_fruta_del_diablo": true,
+    "fruta_logia": false,
+    "es_espadachin": false,
+    "es_cocinero": false,
+    "es_doctor": false,
+    "es_cyborg": false,
+    "es_esqueleto": false,
+    "usa_pistola": false,
+    "es_mujer": true,
+    "tiene_sombrero": false,
+    "es_revolucionario": true,
+    "es_marine": false,
+    "es_almirante": false,
+    "es_shichibukai": false
+  },
+
+  {
+    "nombre": "Dracule Mihawk",
     "es_miembro_mugiwara": false,
     "es_yonko": false,
     "tiene_fruta_del_diablo": false,
@@ -504,29 +550,11 @@
     "es_cyborg": false,
     "es_esqueleto": false,
     "usa_pistola": false,
-    "es_mujer": true,
-    "tiene_sombrero": false,
-    "es_revolucionario": false,
-    "es_marine": false,
-    "es_almirante": false
-  },
-
-  {
-    "nombre": "Lawrence",
-    "es_miembro_mugiwara": false,
-    "es_yonko": false,
-    "tiene_fruta_del_diablo": false,
-    "fruta_logia": false,
-    "es_espadachin": false,
-    "es_cocinero": true,
-    "es_doctor": false,
-    "es_cyborg": false,
-    "es_esqueleto": false,
-    "usa_pistola": false,
     "es_mujer": false,
-    "tiene_sombrero": false,
+    "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "es_almirante": false,
+    "es_shichibukai": true
   }
 ]
