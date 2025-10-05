@@ -72,11 +72,16 @@ def info_gain(candidates, attr):
     gain = n - ((len(t) ** 2 + len(f) ** 2) / n)
     return gain
 
-def best_question(candidates, asked):
+def best_question(candidates, asked, respuestas_previas=None):
+    if respuestas_previas is None:
+        respuestas_previas = {}
     best = None
     best_gain = -1
     for a in ATTRS:
         if a in asked:
+            continue
+        # Solo preguntar por fruta_logia si tiene_fruta_del_diablo fue "s"
+        if a == "fruta_logia" and respuestas_previas.get("tiene_fruta_del_diablo") != "s":
             continue
         g = info_gain(candidates, a)
         if g > best_gain:
@@ -209,22 +214,17 @@ class AkinatorGUI:
         )
         self.exit_button.pack(pady=(0, 15))
 
+        self.respuestas_previas = {}
         self.reset_game()  # Inicializa el juego
 
     def reset_game(self):
         self.candidates = self.chars.copy()
         self.asked = set()
+        self.respuestas_previas = {}
         self.update_question()
 
     def update_question(self):
-        # Si ya no quedan candidatos, pregunta si desea agregar el personaje
-        if len(self.candidates) == 0:
-            if messagebox.askyesno("Sin coincidencias", "No encontré ningún personaje con esas características.\n¿Quieres agregar el personaje correcto?"):
-                self.teach_new()
-            self.reset_game()
-            return
-
-        # Si solo queda un candidato, pregunta si es ese
+        # Si solo queda un candidato, adivina directamente
         if len(self.candidates) == 1:
             name = self.candidates[0]["nombre"]
             if messagebox.askyesno("Mi suposición", f"¿Tu personaje es {name}?"):
@@ -232,26 +232,35 @@ class AkinatorGUI:
                 self.reset_game()
                 return
             else:
-                # Si no es, lo elimina de candidatos y sigue preguntando si hay más
                 self.candidates.pop(0)
                 self.update_question()
                 return
 
         # Busca la mejor pregunta disponible
-        q = best_question(self.candidates, self.asked)
+        q = best_question(self.candidates, self.asked, self.respuestas_previas)
+
+        # Si no hay preguntas útiles, entonces muestra los candidatos restantes
         if not q:
-            # Ya no hay preguntas útiles, muestra los candidatos restantes
+            if len(self.candidates) == 0:
+                if messagebox.askyesno("Sin coincidencias", "No encontré ningún personaje con esas características.\n¿Quieres agregar el personaje correcto?"):
+                    self.teach_new()
+                self.reset_game()
+                return
+
+            # Si hay varios candidatos pero ya no hay preguntas útiles
             names = "\n".join([c["nombre"] for c in self.candidates])
             if messagebox.askyesno("Candidatos restantes", f"No tengo más preguntas útiles.\nPosibles candidatos:\n{names}\n¿Quieres agregar el personaje correcto?"):
                 self.teach_new()
             self.reset_game()
             return
 
+        # Si hay preguntas útiles, sigue preguntando
         self.current_question = q
         self.asked.add(q)
         self.label.config(text=ATTR_TEXT[q])
 
     def answer(self, resp):
+        self.respuestas_previas[self.current_question] = resp
         self.candidates = filtrar(self.candidates, self.current_question, resp)
         self.update_question()
 
