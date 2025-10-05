@@ -14,8 +14,9 @@ ATTRS = [
     "es_miembro_mugiwara", "es_yonko", "tiene_fruta_del_diablo", "fruta_logia",
     "es_espadachin", "es_cocinero", "es_doctor", "es_cyborg", "es_esqueleto",
     "usa_pistola", "es_mujer", "tiene_sombrero", "es_revolucionario", "es_marine",
-    "tiene_cicatriz", "usa_espada_grande", "es_navegante", "tiene_arma_especial",
-    "es_almirante","es_shichibukai"
+    "tiene_cicatriz", "usa_espada_grande", "es_navegante",
+    "es_almirante","es_shichibukai",
+    "tiene_tatuaje", "usa_arma_a_distancia"
 ]
 
 ATTR_TEXT = {
@@ -39,6 +40,8 @@ ATTR_TEXT = {
     "tiene_arma_especial": "¿Tiene un arma especial?",
     "es_almirante": "¿Es un almirante?",
     "es_shichibukai": "¿Es un Shichibukai?",
+    "tiene_tatuaje": "¿Tiene tatuajes visibles?",
+    "usa_arma_a_distancia": "¿Usa un arma a distancia?"
 }
 
 # =========================
