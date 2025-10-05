@@ -20,7 +20,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Roronoa Zoro",
@@ -43,7 +45,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Nami",
@@ -66,7 +70,9 @@
     "es_navegante": true,
     "tiene_arma_especial": true,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   },
   {
     "nombre": "Usopp",
@@ -79,7 +85,7 @@
     "es_doctor": false,
     "es_cyborg": false,
     "es_esqueleto": false,
-    "usa_pistola": true,
+    "usa_pistola": false,
     "es_mujer": false,
     "tiene_sombrero": false,
     "es_revolucionario": false,
@@ -89,7 +95,9 @@
     "es_navegante": false,
     "tiene_arma_especial": true,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": true,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Sanji",
@@ -112,7 +120,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Tony Tony Chopper",
@@ -135,7 +145,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Brook",
@@ -158,7 +170,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Franky",
@@ -181,7 +195,9 @@
     "es_navegante": false,
     "tiene_arma_especial": true,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   },
   {
     "nombre": "Jinbe",
@@ -204,7 +220,9 @@
     "es_navegante": true,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": true
+    "es_shichibukai": true,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   },
   {
     "nombre": "Trafalgar D. Law",
@@ -227,7 +245,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   },
   {
     "nombre": "Shanks",
@@ -250,7 +270,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Crocodile",
@@ -273,7 +295,9 @@
     "es_navegante": false,
     "tiene_arma_especial": true,
     "es_almirante": false,
-    "es_shichibukai": true
+    "es_shichibukai": true,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Boa Hancock",
@@ -296,7 +320,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": true
+    "es_shichibukai": true,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   },
   {
     "nombre": "Marshall D. Teach",
@@ -319,7 +345,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Sabo",
@@ -342,7 +370,9 @@
     "es_navegante": false,
     "tiene_arma_especial": true,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Eustass Kid",
@@ -365,7 +395,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   },
   {
     "nombre": "Kaido",
@@ -388,7 +420,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   },
   {
     "nombre": "Kuzan (Aokiji)",
@@ -411,7 +445,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": true,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Smoker",
@@ -434,7 +470,9 @@
     "es_navegante": false,
     "tiene_arma_especial": true,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Tashigi",
@@ -457,7 +495,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Coby",
@@ -480,7 +520,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Fujitora",
@@ -503,7 +545,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": true,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Enel",
@@ -526,7 +570,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Donquixote Doflamingo",
@@ -549,7 +595,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": true
+    "es_shichibukai": true,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Buggy",
@@ -572,7 +620,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Portgas D. Ace",
@@ -595,7 +645,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje":true
   },
   {
     "nombre": "Nico Robin",
@@ -618,7 +670,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Dracule Mihawk",
@@ -641,7 +695,9 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": false,
-    "es_shichibukai": true
+    "es_shichibukai": true,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": false
   },
   {
     "nombre": "Akainu",
@@ -664,6 +720,8 @@
     "es_navegante": false,
     "tiene_arma_especial": false,
     "es_almirante": true,
-    "es_shichibukai": false
+    "es_shichibukai": false,
+    "usa_arma_a_distancia": false,
+    "tiene_tatuaje": true
   }
 ]
