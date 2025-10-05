@@ -15,10 +15,13 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Roronoa Zoro",
     "es_miembro_mugiwara": true,
@@ -35,10 +38,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Nami",
     "es_miembro_mugiwara": true,
@@ -55,10 +61,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": true,
+    "tiene_arma_especial": true,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Usopp",
     "es_miembro_mugiwara": true,
@@ -75,10 +84,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": true,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Sanji",
     "es_miembro_mugiwara": true,
@@ -95,10 +107,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Tony Tony Chopper",
     "es_miembro_mugiwara": true,
@@ -115,30 +130,36 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Brook",
     "es_miembro_mugiwara": true,
     "es_yonko": false,
     "tiene_fruta_del_diablo": true,
     "fruta_logia": false,
-    "es_espadachin": false,
+    "es_espadachin": true,
     "es_cocinero": false,
     "es_doctor": false,
     "es_cyborg": false,
     "es_esqueleto": true,
     "usa_pistola": false,
     "es_mujer": false,
-    "tiene_sombrero": false,
+    "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Franky",
     "es_miembro_mugiwara": true,
@@ -155,10 +176,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": true,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Jinbe",
     "es_miembro_mugiwara": true,
@@ -175,10 +199,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": true,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": true
   },
-
   {
     "nombre": "Trafalgar D. Law",
     "es_miembro_mugiwara": false,
@@ -195,10 +222,13 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Shanks",
     "es_miembro_mugiwara": false,
@@ -215,10 +245,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Crocodile",
     "es_miembro_mugiwara": false,
@@ -235,10 +268,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": true,
     "es_almirante": false,
     "es_shichibukai": true
   },
-
   {
     "nombre": "Boa Hancock",
     "es_miembro_mugiwara": false,
@@ -255,10 +291,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": true
   },
-
   {
     "nombre": "Marshall D. Teach",
     "es_miembro_mugiwara": false,
@@ -270,15 +309,18 @@
     "es_doctor": false,
     "es_cyborg": false,
     "es_esqueleto": false,
-    "usa_pistola": false,
+    "usa_pistola": true,
     "es_mujer": false,
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Sabo",
     "es_miembro_mugiwara": false,
@@ -295,10 +337,13 @@
     "tiene_sombrero": true,
     "es_revolucionario": true,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": true,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Eustass Kid",
     "es_miembro_mugiwara": false,
@@ -315,10 +360,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Kaido",
     "es_miembro_mugiwara": false,
@@ -335,10 +383,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Kuzan (Aokiji)",
     "es_miembro_mugiwara": false,
@@ -355,10 +406,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": true,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Smoker",
     "es_miembro_mugiwara": false,
@@ -375,10 +429,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": true,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Tashigi",
     "es_miembro_mugiwara": false,
@@ -395,10 +452,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Coby",
     "es_miembro_mugiwara": false,
@@ -415,10 +475,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Fujitora",
     "es_miembro_mugiwara": false,
@@ -435,10 +498,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": true,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": true,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Enel",
     "es_miembro_mugiwara": false,
@@ -455,9 +521,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
-    "es_almirante": false
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
+    "es_almirante": false,
+    "es_shichibukai": false
   },
-
   {
     "nombre": "Donquixote Doflamingo",
     "es_miembro_mugiwara": false,
@@ -474,10 +544,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": true
   },
-
   {
     "nombre": "Buggy",
     "es_miembro_mugiwara": false,
@@ -494,10 +567,13 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Portgas D. Ace",
     "es_miembro_mugiwara": false,
@@ -514,10 +590,13 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Nico Robin",
     "es_miembro_mugiwara": true,
@@ -534,10 +613,13 @@
     "tiene_sombrero": false,
     "es_revolucionario": true,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": false
   },
-
   {
     "nombre": "Dracule Mihawk",
     "es_miembro_mugiwara": false,
@@ -554,7 +636,34 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
+    "tiene_cicatriz": false,
+    "usa_espada_grande": true,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
     "es_almirante": false,
     "es_shichibukai": true
+  },
+  {
+    "nombre": "Akainu",
+    "es_miembro_mugiwara": false,
+    "es_yonko": false,
+    "tiene_fruta_del_diablo": true,
+    "fruta_logia": true,
+    "es_espadachin": false,
+    "es_cocinero": false,
+    "es_doctor": false,
+    "es_cyborg": false,
+    "es_esqueleto": false,
+    "usa_pistola": false,
+    "es_mujer": false,
+    "tiene_sombrero": true,
+    "es_revolucionario": false,
+    "es_marine": true,
+    "tiene_cicatriz": true,
+    "usa_espada_grande": false,
+    "es_navegante": false,
+    "tiene_arma_especial": false,
+    "es_almirante": true,
+    "es_shichibukai": false
   }
 ]

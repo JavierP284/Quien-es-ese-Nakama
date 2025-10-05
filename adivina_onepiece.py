@@ -97,6 +97,7 @@ class AkinatorGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("Adivina Quién (One Piece)")
+        self.root.configure(bg="#1976d2")  # Fondo azul acorde al logo
 
         self.chars = load_data()
         if not self.chars:
@@ -104,41 +105,106 @@ class AkinatorGUI:
             return
 
         # Logo del juego
-        logo_path = "Images/Logo.png"  # tu imagen aquí
+        logo_path = "Images/Logo.png"
         if os.path.exists(logo_path):
             img = Image.open(logo_path)
-            img = img.resize((150, 150))  # ajusta tamaño a tu gusto
+            img = img.resize((150, 150))
             self.logo_img = ImageTk.PhotoImage(img)
-            self.logo_label = tk.Label(root, image=self.logo_img)
-            self.logo_label.pack(pady=5)
+            self.logo_label = tk.Label(root, image=self.logo_img, bg="#1976d2")
+            self.logo_label.pack(pady=(10, 5))
 
         # Nombre del juego visible siempre
-        self.title_label = tk.Label(root, text="=== Adivina Quién (One Piece) ===", font=("Arial", 16, "bold"))
-        self.title_label.pack(pady=5)
+        self.title_label = tk.Label(
+            root,
+            text="=== Adivina Quién (One Piece) ===",
+            font=("Arial", 18, "bold"),
+            fg="#ffd600",  # Amarillo vibrante
+            bg="#1976d2"
+        )
+        self.title_label.pack(pady=(0, 10))
+
+        # Marco para la pregunta
+        self.question_frame = tk.Frame(root, bg="#e3f2fd", bd=2, relief="groove")
+        self.question_frame.pack(pady=10, padx=20, fill="x")
 
         # Label de pregunta
-        self.label = tk.Label(root, text="Bienvenido al juego!", wraplength=400, font=("Arial", 12))
-        self.label.pack(pady=10)
+        self.label = tk.Label(
+            self.question_frame,
+            text="Bienvenido al juego!",
+            wraplength=400,
+            font=("Arial", 14),
+            bg="#e3f2fd",
+            fg="#263238"
+        )
+        self.label.pack(pady=12, padx=10)
 
         # Botones de respuesta
-        self.button_frame = tk.Frame(root)
-        self.button_frame.pack(pady=5)
+        self.button_frame = tk.Frame(root, bg="#1976d2")
+        self.button_frame.pack(pady=10)
 
-        self.s_button = tk.Button(self.button_frame, text="Sí", width=10, command=lambda: self.answer("s"))
-        self.n_button = tk.Button(self.button_frame, text="No", width=10, command=lambda: self.answer("n"))
-        self.nd_button = tk.Button(self.button_frame, text="No sé", width=10, command=lambda: self.answer("nd"))
+        btn_style = {
+            "font": ("Arial", 12, "bold"),
+            "width": 10,
+            "height": 2,
+            "bd": 2,
+            "relief": "raised",
+            "activebackground": "#ffe082"
+        }
+        self.s_button = tk.Button(self.button_frame, text="Sí", bg="#ffd600", fg="black", command=lambda: self.answer("s"), **btn_style)
+        self.n_button = tk.Button(self.button_frame, text="No", bg="#e53935", fg="white", command=lambda: self.answer("n"), **btn_style)
+        self.nd_button = tk.Button(self.button_frame, text="No sé", bg="#fff176", fg="black", command=lambda: self.answer("nd"), **btn_style)
 
-        self.s_button.grid(row=0, column=0, padx=5)
-        self.n_button.grid(row=0, column=1, padx=5)
-        self.nd_button.grid(row=0, column=2, padx=5)
+        self.s_button.grid(row=0, column=0, padx=8)
+        self.n_button.grid(row=0, column=1, padx=8)
+        self.nd_button.grid(row=0, column=2, padx=8)
 
         # Botón de reinicio
-        self.reset_button = tk.Button(root, text="Reiniciar Juego", bg="orange", command=self.reset_game)
-        self.reset_button.pack(pady=5)
+        self.reset_button = tk.Button(
+            root,
+            text="Reiniciar Juego",
+            bg="#ffb300",
+            fg="black",
+            font=("Arial", 12, "bold"),
+            width=18,
+            height=1,
+            bd=2,
+            relief="groove",
+            activebackground="#ffe082",
+            command=self.reset_game
+        )
+        self.reset_button.pack(pady=(10, 5))
 
         # Botón de agregar personaje
-        self.add_button = tk.Button(root, text="Agregar Personaje", bg="lightgreen", command=self.teach_new)
-        self.add_button.pack(pady=5)
+        self.add_button = tk.Button(
+            root,
+            text="Agregar Personaje",
+            bg="#00e676",
+            fg="black",
+            font=("Arial", 12, "bold"),
+            width=18,
+            height=1,
+            bd=2,
+            relief="groove",
+            activebackground="#b9f6ca",
+            command=self.teach_new
+        )
+        self.add_button.pack(pady=(0, 15))
+
+        # Botón de salir
+        self.exit_button = tk.Button(
+            root,
+            text="Salir",
+            bg="#e53935",
+            fg="white",
+            font=("Arial", 12, "bold"),
+            width=18,
+            height=1,
+            bd=2,
+            relief="groove",
+            activebackground="#ff8a65",
+            command=self.root.quit
+        )
+        self.exit_button.pack(pady=(0, 15))
 
         self.reset_game()  # Inicializa el juego
 
@@ -148,19 +214,33 @@ class AkinatorGUI:
         self.update_question()
 
     def update_question(self):
+        # Si ya no quedan candidatos, pregunta si desea agregar el personaje
+        if len(self.candidates) == 0:
+            if messagebox.askyesno("Sin coincidencias", "No encontré ningún personaje con esas características.\n¿Quieres agregar el personaje correcto?"):
+                self.teach_new()
+            self.reset_game()
+            return
+
+        # Si solo queda un candidato, pregunta si es ese
         if len(self.candidates) == 1:
             name = self.candidates[0]["nombre"]
             if messagebox.askyesno("Mi suposición", f"¿Tu personaje es {name}?"):
                 messagebox.showinfo("¡Acerté!", "¡Genial! He acertado.")
+                self.reset_game()
+                return
             else:
-                messagebox.showinfo("Fallé", "Oh, fallé.")
-            self.reset_game()
-            return
+                # Si no es, lo elimina de candidatos y sigue preguntando si hay más
+                self.candidates.pop(0)
+                self.update_question()
+                return
 
+        # Busca la mejor pregunta disponible
         q = best_question(self.candidates, self.asked)
         if not q:
+            # Ya no hay preguntas útiles, muestra los candidatos restantes
             names = "\n".join([c["nombre"] for c in self.candidates])
-            messagebox.showinfo("Candidatos restantes", f"No tengo más preguntas útiles.\nPosibles candidatos:\n{names}")
+            if messagebox.askyesno("Candidatos restantes", f"No tengo más preguntas útiles.\nPosibles candidatos:\n{names}\n¿Quieres agregar el personaje correcto?"):
+                self.teach_new()
             self.reset_game()
             return
 
