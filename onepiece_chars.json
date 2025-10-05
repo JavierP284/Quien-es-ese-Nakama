@@ -340,7 +340,7 @@
     "tiene_sombrero": true,
     "es_revolucionario": false,
     "es_marine": false,
-    "tiene_cicatriz": true,
+    "tiene_cicatriz": false,
     "usa_espada_grande": false,
     "es_navegante": false,
     "tiene_arma_especial": false,
