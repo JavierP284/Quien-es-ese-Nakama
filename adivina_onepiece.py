@@ -1,11 +1,14 @@
 import json
 import os
+import tkinter as tk
+from tkinter import messagebox
+from PIL import Image, ImageTk  # Para manejar la imagen del logo
 
 # =========================
 # CONFIGURACIÓN Y CONSTANTES
 # =========================
 
-DATA_FILE = "onepiece_chars.json"  # Archivo JSON con todos los personajes
+DATA_FILE = "onepiece_chars.json"
 
 ATTRS = [
     "es_miembro_mugiwara", "es_yonko", "tiene_fruta_del_diablo", "fruta_logia",
@@ -39,7 +42,7 @@ ATTR_TEXT = {
 }
 
 # =========================
-# UTILIDADES DE ARCHIVO
+# FUNCIONES DE LÓGICA
 # =========================
 
 def load_data():
@@ -48,18 +51,14 @@ def load_data():
             with open(DATA_FILE, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
-            print("Error cargando el JSON:", e)
+            messagebox.showerror("Error", f"Error cargando JSON: {e}")
     else:
-        print(f"No se encontró el archivo {DATA_FILE}. Asegúrate de tener tu JSON.")
+        messagebox.showerror("Error", f"No se encontró {DATA_FILE}")
     return []
 
 def save_data(chars):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(chars, f, ensure_ascii=False, indent=2)
-
-# =========================
-# LÓGICA DE PREGUNTAS
-# =========================
 
 def info_gain(candidates, attr):
     n = len(candidates)
@@ -67,7 +66,7 @@ def info_gain(candidates, attr):
         return -1
     t = [c for c in candidates if c.get(attr)]
     f = [c for c in candidates if not c.get(attr)]
-    gain = n - ((len(t) ** 2 + len(f) ** 2) / n)  # preferir divisiones balanceadas
+    gain = n - ((len(t) ** 2 + len(f) ** 2) / n)
     return gain
 
 def best_question(candidates, asked):
@@ -82,13 +81,6 @@ def best_question(candidates, asked):
             best = a
     return best
 
-def respuesta_usuario(preg):
-    while True:
-        r = input(preg + " (s/n/nd para No sé): ").strip().lower()
-        if r in ("s", "n", "nd"):
-            return r
-        print("Respuesta no válida. Escribe 's', 'n' o 'nd'.")
-
 def filtrar(candidates, attr, resp):
     if resp == "s":
         return [c for c in candidates if c.get(attr)]
@@ -98,56 +90,121 @@ def filtrar(candidates, attr, resp):
         return candidates
 
 # =========================
-# JUEGO PRINCIPAL
+# INTERFAZ GRÁFICA
 # =========================
 
-def jugar():
-    chars = load_data()
-    if not chars:
-        print("No hay personajes cargados. Saliendo del juego.")
-        return
+class AkinatorGUI:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Adivina Quién (One Piece)")
 
-    print("=== Juego: Adivina Quién (One Piece) ===")
-    candidates = chars.copy()
-    asked = set()
+        self.chars = load_data()
+        if not self.chars:
+            self.root.destroy()
+            return
 
-    while True:
-        print(f"\nCandidatos restantes: {len(candidates)}")
-        if len(candidates) == 1:
-            print("Mi suposición es:", candidates[0]["nombre"])
-            r = input("¿Adiviné? (s/n): ").strip().lower()
-            if r == "s":
-                print("¡Genial! He acertado.")
+        # Logo del juego
+        logo_path = "Images/Logo.png"  # tu imagen aquí
+        if os.path.exists(logo_path):
+            img = Image.open(logo_path)
+            img = img.resize((150, 150))  # ajusta tamaño a tu gusto
+            self.logo_img = ImageTk.PhotoImage(img)
+            self.logo_label = tk.Label(root, image=self.logo_img)
+            self.logo_label.pack(pady=5)
+
+        # Nombre del juego visible siempre
+        self.title_label = tk.Label(root, text="=== Adivina Quién (One Piece) ===", font=("Arial", 16, "bold"))
+        self.title_label.pack(pady=5)
+
+        # Label de pregunta
+        self.label = tk.Label(root, text="Bienvenido al juego!", wraplength=400, font=("Arial", 12))
+        self.label.pack(pady=10)
+
+        # Botones de respuesta
+        self.button_frame = tk.Frame(root)
+        self.button_frame.pack(pady=5)
+
+        self.s_button = tk.Button(self.button_frame, text="Sí", width=10, command=lambda: self.answer("s"))
+        self.n_button = tk.Button(self.button_frame, text="No", width=10, command=lambda: self.answer("n"))
+        self.nd_button = tk.Button(self.button_frame, text="No sé", width=10, command=lambda: self.answer("nd"))
+
+        self.s_button.grid(row=0, column=0, padx=5)
+        self.n_button.grid(row=0, column=1, padx=5)
+        self.nd_button.grid(row=0, column=2, padx=5)
+
+        # Botón de reinicio
+        self.reset_button = tk.Button(root, text="Reiniciar Juego", bg="orange", command=self.reset_game)
+        self.reset_button.pack(pady=5)
+
+        # Botón de agregar personaje
+        self.add_button = tk.Button(root, text="Agregar Personaje", bg="lightgreen", command=self.teach_new)
+        self.add_button.pack(pady=5)
+
+        self.reset_game()  # Inicializa el juego
+
+    def reset_game(self):
+        self.candidates = self.chars.copy()
+        self.asked = set()
+        self.update_question()
+
+    def update_question(self):
+        if len(self.candidates) == 1:
+            name = self.candidates[0]["nombre"]
+            if messagebox.askyesno("Mi suposición", f"¿Tu personaje es {name}?"):
+                messagebox.showinfo("¡Acerté!", "¡Genial! He acertado.")
             else:
-                print("Oh, fallé.")
-            break
+                messagebox.showinfo("Fallé", "Oh, fallé.")
+            self.reset_game()
+            return
 
-        q = best_question(candidates, asked)
+        q = best_question(self.candidates, self.asked)
         if not q:
-            print("No tengo más preguntas útiles. Los candidatos posibles son:")
-            for c in candidates:
-                print(" -", c["nombre"])
-            break
+            names = "\n".join([c["nombre"] for c in self.candidates])
+            messagebox.showinfo("Candidatos restantes", f"No tengo más preguntas útiles.\nPosibles candidatos:\n{names}")
+            self.reset_game()
+            return
 
-        asked.add(q)
-        resp = respuesta_usuario(ATTR_TEXT[q])
-        candidates = filtrar(candidates, q, resp)
+        self.current_question = q
+        self.asked.add(q)
+        self.label.config(text=ATTR_TEXT[q])
 
-    # Aprender nuevo personaje si falla
-    r = input("¿Quieres enseñar al sistema un personaje nuevo? (s/n): ").strip().lower()
-    if r == "s":
-        nombre = input("Nombre del personaje: ").strip()
-        new = {"nombre": nombre}
+    def answer(self, resp):
+        self.candidates = filtrar(self.candidates, self.current_question, resp)
+        self.update_question()
+
+    def teach_new(self):
+        new_window = tk.Toplevel()
+        new_window.title("Nuevo personaje")
+        tk.Label(new_window, text="Nombre del personaje:").pack()
+        name_entry = tk.Entry(new_window)
+        name_entry.pack()
+
+        attrs_vars = {}
         for a in ATTRS:
-            val = input(f"{ATTR_TEXT[a]} (s/n): ").strip().lower()
-            new[a] = (val == "s")
-        chars.append(new)
-        save_data(chars)
-        print(f"Personaje '{nombre}' guardado. Gracias por enseñar al sistema.")
+            var = tk.IntVar()
+            tk.Checkbutton(new_window, text=ATTR_TEXT[a], variable=var).pack(anchor="w")
+            attrs_vars[a] = var
+
+        def save_new():
+            nombre = name_entry.get().strip()
+            if not nombre:
+                messagebox.showerror("Error", "Debe poner un nombre.")
+                return
+            new_char = {"nombre": nombre}
+            for a in ATTRS:
+                new_char[a] = bool(attrs_vars[a].get())
+            self.chars.append(new_char)
+            save_data(self.chars)
+            messagebox.showinfo("Guardado", f"Personaje '{nombre}' guardado.")
+            new_window.destroy()
+
+        tk.Button(new_window, text="Guardar", command=save_new).pack(pady=10)
 
 # =========================
 # EJECUCIÓN
 # =========================
 
 if __name__ == "__main__":
-    jugar()
+    root = tk.Tk()
+    gui = AkinatorGUI(root)
+    root.mainloop()
