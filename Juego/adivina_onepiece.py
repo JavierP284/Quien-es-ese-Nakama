@@ -104,7 +104,7 @@ def filtrar(candidates, attr, resp):
 class AkinatorGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("Adivina Quién (One Piece)")
+      ##  self.root.title("Adivina Quién (One Piece)")
         self.root.configure(bg="#1976d2")  # Fondo azul acorde al logo
 
         self.chars = load_data()
@@ -112,24 +112,27 @@ class AkinatorGUI:
             self.root.destroy()
             return
 
-        # Logo del juego
-        logo_path = "Images/Logo.png"
+        # Logo del juego (ruta absoluta)
+        logo_path = os.path.join(os.path.dirname(__file__), "Images", "Logo.png")
         if os.path.exists(logo_path):
             img = Image.open(logo_path)
             img = img.resize((150, 150))
             self.logo_img = ImageTk.PhotoImage(img)
             self.logo_label = tk.Label(root, image=self.logo_img, bg="#1976d2")
             self.logo_label.pack(pady=(10, 5))
+        else:
+            self.logo_label = tk.Label(root, text="Logo no encontrado", bg="#1976d2", fg="white", font=("Arial", 12, "italic"))
+            self.logo_label.pack(pady=(10, 5))
 
         # Nombre del juego visible siempre
-        self.title_label = tk.Label(
-            root,
-            text="=== Adivina Quién (One Piece) ===",
-            font=("Arial", 18, "bold"),
-            fg="#ffd600",  # Amarillo vibrante
-            bg="#1976d2"
-        )
-        self.title_label.pack(pady=(0, 10))
+        ##self.title_label = tk.Label(
+          ##  root,
+           ## text="=== Adivina Quién (One Piece) ===",
+            ##font=("Arial", 18, "bold"),
+            ##fg="#ffd600",  # Amarillo vibrante
+          ##  bg="#1976d2"
+      ##  )
+        ##self.title_label.pack(pady=(0, 10))
 
         # Marco para la pregunta
         self.question_frame = tk.Frame(root, bg="#e3f2fd", bd=2, relief="groove")
