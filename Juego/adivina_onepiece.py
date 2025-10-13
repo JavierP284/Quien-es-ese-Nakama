@@ -8,7 +8,7 @@ from PIL import Image, ImageTk  # Para manejar la imagen del logo
 # CONFIGURACIÓN Y CONSTANTES
 # =========================
 
-DATA_FILE = "Juego/onepiece_chars.json"
+DATA_FILE = os.path.join(os.path.dirname(__file__), "onepiece_chars.json")
 
 ATTRS = [
     "es_miembro_mugiwara", "es_yonko", "tiene_fruta_del_diablo", "fruta_logia",
