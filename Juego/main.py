@@ -80,9 +80,15 @@ def best_question(candidates, asked, respuestas_previas=None):
     for a in ATTRS:
         if a in asked:
             continue
+
         # Solo preguntar por fruta_logia si tiene_fruta_del_diablo fue "s"
         if a == "fruta_logia" and respuestas_previas.get("tiene_fruta_del_diablo") != "s":
             continue
+
+        # No preguntar si es revolucionario si es marine
+        if a == "es_revolucionario" and respuestas_previas.get("es_marine") == "s":
+            continue
+
         g = info_gain(candidates, a)
         if g > best_gain:
             best_gain = g
