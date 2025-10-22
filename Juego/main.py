@@ -1,5 +1,6 @@
 import json
 import os
+import math
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
@@ -52,7 +53,7 @@ def load_data():
         try:
             with open(DATA_FILE, "r", encoding="utf-8") as f:
                 chars = json.load(f)
-            # Normalizar atributos para que todos tengan todas las claves
+            # Normalizar atributos
             for c in chars:
                 for a in ATTRS:
                     c.setdefault(a, False)
@@ -68,13 +69,21 @@ def save_data(chars):
         json.dump(chars, f, ensure_ascii=False, indent=2)
 
 def info_gain(candidates, attr):
+    """Calcula la entropía del atributo para medir cuán informativa es la pregunta."""
     n = len(candidates)
     if n == 0:
         return -1
-    t = [c for c in candidates if c.get(attr)]
-    f = [c for c in candidates if not c.get(attr)]
-    gain = n - ((len(t) ** 2 + len(f) ** 2) / n)
-    return gain
+    t = sum(1 for c in candidates if c.get(attr))
+    f = n - t
+    # Probabilidades
+    p_t = t / n if t > 0 else 0
+    p_f = f / n if f > 0 else 0
+    entropy = 0
+    if p_t > 0:
+        entropy -= p_t * math.log2(p_t)
+    if p_f > 0:
+        entropy -= p_f * math.log2(p_f)
+    return entropy  # Mayor entropía = pregunta más útil
 
 def best_question(candidates, asked, respuestas_previas=None):
     if respuestas_previas is None:
